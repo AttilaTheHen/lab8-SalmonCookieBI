@@ -16,36 +16,38 @@
 
     <nav class="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/locations.html">Locations</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <section id="data-body">
         <section id="form">
         <h1>Saumon's Cookies: Sales Data</h1>
-            <fieldset>
-                <legend>Enter New Store</legend>
-                <label>
-                    Store Location:
-                    <input type="text" name="store" id="store-location"><br>
-                </label>
-                <label>
-                    Minimum Customers Per Hour:
-                    <input type="text" name="min" id="min-customers"><br> 
-                </label>
-                <label>
-                    Maximum Customers Per Hour:
-                    <input type="text" name="max" id="max-customers"><br>
-                </label>
-                <label id="last-box">
-                    Average Cookies Per Sale:
-                    <input type="text" name ="avg" id="avg-cookie"><br>
-                </label>
-                <button id="submit-data" onclick="addNewStore()">Add New Store</button>
-            </fieldset>
+            <form id="new-data">
+                <fieldset>
+                    <legend>Enter New Store</legend>
+                    <label>
+                        Store Location:
+                        <input type="text" name="store" id="store-location" required><br>
+                    </label>
+                    <label>
+                        Minimum Customers Per Hour:
+                        <input type="number" name="min" id="min-customers" required><br> 
+                    </label>
+                    <label>
+                        Maximum Customers Per Hour:
+                        <input type="number" name="max" id="max-customers" required><br>
+                    </label>
+                    <label id="last-box">
+                        Average Cookies Per Sale:
+                        <input type="number" step="0.1" name ="avg" id="avg-cookie" required><br>
+                    </label>
+                    <input type="submit" id="submit-data" value="Add New Store">
+                </fieldset>
+            </form>
         </section>
         
         <section id="table">

@@ -134,3 +134,6 @@ function populateTableBody() {
 }
 
 populateTableBody();
+
+const newStoreButton = document.getElementById('submit-data');
+newStoreButton.addEventListener('submit', addNewStore);
